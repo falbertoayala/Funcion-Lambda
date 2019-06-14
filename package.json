@@ -1,0 +1,22 @@
+{
+  "name": "funcionlambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francisco Ayala",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "curl": "^0.1.4",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongodb": "^2.2.36",
+    "node-env-file": "^0.1.8",
+    "node-mailjet": "^3.3.1",
+    "twilio": "^3.32.0"
+  }
+}
