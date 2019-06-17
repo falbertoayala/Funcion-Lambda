@@ -5,14 +5,12 @@ var twilio = require('twilio');
 var env = require('node-env-file');
 env(__dirname + '/.env')
 
-
 var today = moment().format("MMM Do");
 var fetch = "" ;
 var fetch2 = "" ;
 var email = "";
 var emailApiKey = process.env.EMAILAPYKEY;
 var connectDb = process.env.CONNECTDB;
-
 
 MongoClient.connect(connectDb, function (err, db){
 if (err) throw err;
@@ -28,8 +26,7 @@ db.collection('users', function (err, collection) {
             email = data.correo;
             fetch2 = moment(fetch).format("MMM Do");
             if(fetch2 === today){
-                
-                
+                                
                 console.log("Se ha enviado un correo de felicitacion a "+data.nombre+" "+data.apellido+" "+email)
                 sgMail.send(msg);
                
@@ -39,17 +36,12 @@ db.collection('users', function (err, collection) {
                 }
                            
             });
-                      
             
         });
-
     
     });
 
-    
-
 });
-
 
 const sgMail = require('@sendgrid/mail');
 //sgMail.setApiKey("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");
@@ -62,11 +54,4 @@ const msg = {
   html: '<strong>Felicidades</strong>',
 };
 //sgMail.send(msg);
-
-
-
-
-
-
-
-        
+       
