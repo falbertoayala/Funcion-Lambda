@@ -44,7 +44,7 @@ db.collection('users', function (err, collection) {
 });
 
 const sgMail = require('@sendgrid/mail');
-//sgMail.setApiKey("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");
+
 sgMail.setApiKey(emailApiKey)
 const msg = {
   to: 'falberto.ayala@gmail.com',
