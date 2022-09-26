@@ -16,7 +16,7 @@
     "moment": "^2.24.0",
     "mongodb": "^2.2.36",
     "node-env-file": "^0.1.8",
-    "node-mailjet": "^3.3.1",
+    "node-mailjet": "^3.4.1",
     "twilio": "^3.32.0"
   }
 }
